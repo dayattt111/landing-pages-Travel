@@ -193,7 +193,7 @@ nav {
     flex-wrap: wrap;
     gap: 20px;
 }
-.card, .card1, .card2 {
+.card, .card1{
     background-color: #f4f4f4;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -227,3 +227,360 @@ nav {
     display: flex;
     justify-content: space-around;
 }
+
+
+
+
+.container4 {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 3em;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    animation: fadeInDown 1.2s ease;
+}
+
+.header h3 {
+    font-size: 1.5em;
+    color: #777;
+    animation: fadeInUp 1.2s ease;
+}
+
+.content {
+    text-align: center;
+    margin-bottom: 50px;
+    max-width: 700px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #444;
+    animation: fadeIn 1.5s ease;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #555;
+    animation: fadeIn 1.8s ease;
+}
+
+.blues {
+    color: #007BFF;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.images {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.image-container {
+    position: relative;
+    width: 45%;
+    overflow: hidden;
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    transform: scale(1.1);
+    transition: transform 1.2s ease-in-out, opacity 1.2s ease-in-out;
+    filter: grayscale(50%);
+}
+
+.left-image {
+    transform: translateX(-150%);
+}
+
+.right-image {
+    transform: translateX(150%);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+}
+
+.container4:hover .left-image,
+.container4:hover .right-image {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.container4:hover .overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+/* Container Styling */
+.container5 {
+    padding: 25px 20px 50px 20px;
+    /* margin-bottom: 50px; */
+    background-color: #f4f4f4;
+  }
+  
+  /* Heading Styling */
+  .container5 h1 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .container5 .blues {
+    color: #1e90ff;
+  }
+  
+  /* Grid Layout for Cards */
+  .gridCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    /* padding: 50px; */
+  }
+  
+  /* Card Styling */
+  .card2 {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Image Styling */
+  .iscard img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  
+  .card2:hover .iscard img {
+    transform: scale(1.1);
+  }
+  
+  /* Title Styling */
+  .card2 h4 {
+    font-size: 1.25em;
+    margin: 10px;
+  }
+  
+  /* Card Foot Styling */
+  .flex.cardFoot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .card2:hover .cardFoot {
+    background-color: #f0f8ff;
+  }
+  
+  /* Circle Styling */
+  .circle {
+    background: #1e90ff;
+    border-radius: 50%;
+    color: white;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+  }
+  
+  /* More Images Section Styling */
+  .moreImages {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .viewMore {
+    color: #1e90ff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .viewMore:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Footer Header Styling */
+  .footHead {
+    margin-bottom: 20px;
+  }
+  
+  .footHead h3 {
+    font-size: 2em;
+    margin: 0;
+    color: #fff;
+  }
+  
+  /* Footer Contains Section */
+  .footContains {
+    margin-bottom: 30px;
+  }
+  
+  .footContains img {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+  
+  .footContains h1 {
+    font-size: 1.75em;
+    color: #1e90ff;
+    margin: 10px 0;
+  }
+  
+  .bold {
+    font-weight: bold;
+  }
+  
+  .footContains h4 {
+    font-size: 1.25em;
+    color: #ddd;
+  }
+  
+  /* Grid Layout for Footer Content */
+  .gridFoot {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  
+  /* Footer Columns Styling */
+  .foot1, .foot2 {
+    text-align: left;
+  }
+  
+  .foot1 h5 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #bbb;
+  }
+  
+  .foot2 h6 {
+    font-size: 1em;
+    margin: 5px 0;
+  }
+  
+  /* Social Icons Styling */
+  .socialIcons {
+    margin-top: 10px;
+  }
+  
+  .socialIcons a {
+    text-decoration: none;
+    color: #1e90ff;
+    margin: 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .socialIcons a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive Design for Footer */
+  @media (max-width: 768px) {
+    .gridFoot {
+      grid-template-columns: 1fr;
+    }
+  
+    .foot1, .foot2 {
+      text-align: center;
+    }
+  }
+  
