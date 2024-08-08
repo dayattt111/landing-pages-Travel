@@ -1,0 +1,40 @@
+.container7 {
+    padding: 40px 20px;
+    background-color: white;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+.profile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.profile-nav label {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+.profile-nav input[type="text"],
+.profile-nav input[type="email"],
+.profile-nav input[type="password"] {
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+.profile-nav button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+.profile-nav button:hover {
+    background-color: #0056b3;
+}
